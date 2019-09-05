@@ -183,8 +183,12 @@ class Taxonomy_Extra_Fields {
 		$tef_image_id = get_term_meta( $tef_term_id, 'tef-image', true );
 		$tef_image    = wp_get_attachment_image( $tef_image_id, 'full' );
 		$tef_video    = get_term_meta( $tef_term_id, 'tef-video', true );
-		$title       .= '<div class="tef-image-wrapper">' . $tef_image . '</div>';
-		$title       .= '<div class="tef-iframe-wrapper">' . $wp_embed->autoembed( $tef_video ) . '</div>';
+		if ( $tef_image ) {
+			$title .= '<div class="tef-image-wrapper">' . $tef_image . '</div>';
+		}
+		if ( $tef_video ) {
+			$title .= '<div class="tef-iframe-wrapper">' . $wp_embed->autoembed( $tef_video ) . '</div>';
+		}
 
 		return $title;
 	}
