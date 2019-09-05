@@ -1,0 +1,21 @@
+#tef-term-image .tef-preview-image {
+  float: none;
+  margin: 0;
+  padding: 0;
+  max-height: 100px;
+}
+
+#tef-term-video {
+  position: relative;
+  margin-bottom: 10px;
+  padding-top: 53%;
+  height: 0;
+}
+
+#tef-term-video iframe {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  height: 100%;
+  width: calc(100% - 28px);
+}

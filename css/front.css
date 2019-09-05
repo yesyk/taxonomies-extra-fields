@@ -1,0 +1,14 @@
+.tef-iframe-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+    padding-top: 53%;
+    height: 0;
+}
+
+.tef-iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
